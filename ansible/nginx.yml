@@ -1,0 +1,9 @@
+---
+- hosts: myServers
+  become: yes
+  tasks:
+    - name: Installs Nginx web server
+      apt: 
+        name: nginx
+        state: present
+        update_cache: yes
